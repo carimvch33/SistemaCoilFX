@@ -38,7 +38,7 @@
             <Font name="Impact" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lbQueEsCOIL" alignment="CENTER" contentDisplay="CENTER" layoutX="459.0" layoutY="171.0" prefHeight="329.0" prefWidth="240.0" textAlignment="CENTER" textFill="GREY">
+      <Label fx:id="lbQueEsCOIL" alignment="CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="171.0" prefHeight="331.0" prefWidth="240.0" textAlignment="CENTER" textFill="GREY">
          <font>
             <Font name="Calibri" size="12.0" />
          </font></Label>
@@ -52,26 +52,26 @@
             <Button fx:id="btnRegistrarProfeExterno" layoutX="7.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaExterna" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
             <Button fx:id="btnEditarProfeExterno" layoutX="7.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnClicEditarProfeExterno" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
             <Button fx:id="btnConsultarHistorialColaboraciones" layoutX="7.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnClicConsultarHistorialColaboraciones" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
-            <Label fx:id="lbRegistrarOfertaUV" layoutX="56.0" layoutY="25.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Oferta de Colaboración UV" textFill="#00af50" wrapText="true">
+            <Label fx:id="lbRegistrarOfertaUV" layoutX="56.0" layoutY="25.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font></Label>
-            <Label fx:id="lbModificarOfertaUV" layoutX="56.0" layoutY="66.0" prefHeight="35.0" prefWidth="116.0" text="Modificar Oferta de Colaboración UV" textFill="#00af50" wrapText="true">
+            <Label fx:id="lbModificarOfertaUV" layoutX="56.0" layoutY="66.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lbRegistrarColaboracion" layoutX="56.0" layoutY="107.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Colaboración" textFill="#00af50" wrapText="true">
+            <Label fx:id="lbRegistrarColaboracion" layoutX="56.0" layoutY="107.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lbCancelarColaboracion" layoutX="56.0" layoutY="149.0" prefHeight="35.0" prefWidth="116.0" text="Cancelar Colaboración" textFill="#00af50" wrapText="true">
+            <Label fx:id="lbCancelarColaboracion" layoutX="56.0" layoutY="149.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lbRegistrarProfeExterno" layoutX="56.0" layoutY="234.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Profesor Externo" textFill="#00af50">
+            <Label fx:id="lbRegistrarProfeExterno" layoutX="56.0" layoutY="234.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
@@ -81,7 +81,7 @@
                   <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lbConcluirColaboracion" layoutX="56.0" layoutY="193.0" prefHeight="35.0" prefWidth="116.0" text="Concluir Colaboración" textFill="#00af50" wrapText="true">
+            <Label fx:id="lbConcluirColaboracion" layoutX="56.0" layoutY="193.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
