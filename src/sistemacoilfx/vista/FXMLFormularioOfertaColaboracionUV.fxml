@@ -11,7 +11,7 @@
    <children>
       <Pane prefHeight="68.0" prefWidth="768.0" style="-fx-background-color: #9999FF;">
          <children>
-            <Label fx:id="lbTituloFormulario" layoutX="118.0" layoutY="14.0" text="Registrar Oferta de Colaboración UV" textFill="WHITE">
+            <Label fx:id="lbTituloFormulario" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="40.0" prefWidth="700.0" text="Registrar Oferta de Colaboración UV" textFill="WHITE">
                <font>
                   <Font name="Berlin Sans FB" size="35.0" />
                </font>
@@ -30,13 +30,13 @@
             <Font name="Calibri" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="tfNombreCursoCV" layoutX="264.0" layoutY="117.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="tfNombreCursoCV" focusTraversable="false" layoutX="264.0" layoutY="117.0" prefHeight="25.0" prefWidth="210.0" />
       <Label layoutX="31.0" layoutY="165.0" text="Disciplina:">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbPeriodo" layoutX="123.0" layoutY="210.0" prefHeight="25.0" prefWidth="210.0" />
+      <ComboBox fx:id="cbPeriodo" focusTraversable="false" layoutX="123.0" layoutY="210.0" prefHeight="25.0" prefWidth="210.0" />
       <Label layoutX="31.0" layoutY="211.0" text="Periodo:">
          <font>
             <Font name="Calibri" size="20.0" />
@@ -57,7 +57,7 @@
             <Font name="Calibri" size="20.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbIdioma" layoutX="558.0" layoutY="117.0" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="cbIdioma" focusTraversable="false" layoutX="558.0" layoutY="117.0" prefHeight="25.0" prefWidth="174.0" />
       <Label layoutX="398.0" layoutY="211.0" text="Área académica:">
          <font>
             <Font name="Calibri" size="20.0" />
@@ -73,12 +73,12 @@
             <Font name="Calibri" size="20.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbAreaAcademica" layoutX="538.0" layoutY="210.0" prefHeight="25.0" prefWidth="194.0" />
-      <ComboBox fx:id="cbDependencia" layoutX="538.0" layoutY="164.0" prefHeight="25.0" prefWidth="194.0" />
-      <TextField fx:id="tfDisciplina" layoutX="123.0" layoutY="164.0" prefHeight="25.0" prefWidth="210.0" />
-      <TextArea fx:id="taObjetivoCurso" layoutX="33.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
-      <TextArea fx:id="taPerfilEstudiantes" layoutX="398.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
-      <TextArea fx:id="taTemasInteres" layoutX="33.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
-      <TextArea fx:id="taInformacionAdicional" layoutX="398.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <ComboBox fx:id="cbAreaAcademica" focusTraversable="false" layoutX="538.0" layoutY="210.0" prefHeight="25.0" prefWidth="194.0" />
+      <ComboBox fx:id="cbDependencia" focusTraversable="false" layoutX="538.0" layoutY="164.0" prefHeight="25.0" prefWidth="194.0" />
+      <TextField fx:id="tfDisciplina" focusTraversable="false" layoutX="123.0" layoutY="164.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextArea fx:id="taObjetivoCurso" focusTraversable="false" layoutX="33.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taPerfilEstudiantes" focusTraversable="false" layoutX="398.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taTemasInteres" focusTraversable="false" layoutX="33.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taInformacionAdicional" focusTraversable="false" layoutX="398.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
    </children>
 </AnchorPane>
