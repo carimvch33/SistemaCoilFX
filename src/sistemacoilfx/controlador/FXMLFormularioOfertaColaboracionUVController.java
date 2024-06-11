@@ -28,7 +28,7 @@ import sistemacoilfx.utilidades.Utils;
 
 public class FXMLFormularioOfertaColaboracionUVController implements Initializable {
     
-    private OfertaColaboracionUV ofertaColaboracionUVEdicion;
+    private OfertaColaboracionUV ofertaEdicion;
     private int idProfesorUV;
     private ObservadorOfertaColaboracionUV observador;
     ObservableList<Periodo> periodos;
@@ -71,14 +71,14 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
         cargarDependencias();
     }
     
-    public void inicializarValores(OfertaColaboracionUV ofertaColaboracionUVEdicion, int idProfesorUV, ObservadorOfertaColaboracionUV observador){
-        this.ofertaColaboracionUVEdicion = ofertaColaboracionUVEdicion;
+    public void inicializarValores(OfertaColaboracionUV ofertaEdicion, int idProfesorUV, ObservadorOfertaColaboracionUV observador){
+        this.ofertaEdicion = ofertaEdicion;
         this.idProfesorUV = idProfesorUV;
         this.observador = observador;
-        System.out.println("Oferta Colaboración UV: " + ((ofertaColaboracionUVEdicion != null) ? ofertaColaboracionUVEdicion.getNombre() : "NUEVA"));
-        if(this.ofertaColaboracionUVEdicion != null){
-            lbTituloFormulario.setText("Modificar los datos de "+ofertaColaboracionUVEdicion.getNombre());
-            //cargarInformacionPacienteEdicion(this.ofertaColaboracionUVEdicion);
+        System.out.println("Oferta Colaboración UV: " + ((ofertaEdicion != null) ? ofertaEdicion.getNombre() : "NUEVA"));
+        if(this.ofertaEdicion != null){
+            lbTituloFormulario.setText(ofertaEdicion.getNombre());
+            cargarInformacionOfertaEdicion(this.ofertaEdicion);
         }
     }
     
@@ -110,10 +110,10 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
     private void btnClicRegistrar(ActionEvent event) {
         if(validarCampos() == true){
             OfertaColaboracionUV ofertaColaboracionUV = obtenerInformacionOfertaColaboracionUV();
-            if(ofertaColaboracionUVEdicion == null){
+            if(ofertaEdicion == null){
                 registrarOfertaColaboracionUV(ofertaColaboracionUV);
             }else{
-                ofertaColaboracionUVEdicion = obtenerInformacionOfertaColaboracionUV();
+                ofertaEdicion = obtenerInformacionOfertaColaboracionUV();
                 //actualizar
             }
         }
@@ -122,6 +122,55 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
     @FXML
     private void btnClicCancelar(ActionEvent event) {
         cerrarVentana();
+    }
+    
+    private int buscarIdIdioma(int idIdioma){
+        for(int i = 0; i < idiomas.size(); i++){
+            if(idiomas.get(i).getIdIdioma() == idIdioma){
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+    private int buscarIdAreaAcademica(int idAreaAcademica){
+        for(int i = 0; i < areasAcademicas.size(); i++){
+            if(areasAcademicas.get(i).getIdAreaAcademica() == idAreaAcademica){
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+    private int buscarIdDependencia(int idDependencia){
+        for(int i = 0; i < dependencias.size(); i++){
+            if(dependencias.get(i).getIdDependencia()== idDependencia){
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+    private int buscarIdPeriodo(int idPeriodo){
+        for(int i = 0; i < periodos.size(); i++){
+            if(periodos.get(i).getIdPeriodo()== idPeriodo){
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+    private void cargarInformacionOfertaEdicion(OfertaColaboracionUV ofertaColaboracionUV){
+        tfNombreCursoCV.setText(ofertaColaboracionUV.getNombre());
+        tfDisciplina.setText(ofertaColaboracionUV.getDisciplina());
+        taObjetivoCurso.setText(ofertaColaboracionUV.getObjetivoCurso());
+        taPerfilEstudiantes.setText(ofertaColaboracionUV.getPerfilEstudiante());
+        taTemasInteres.setText(ofertaColaboracionUV.getTemaInteres());
+        taInformacionAdicional.setText(ofertaColaboracionUV.getInformacionAdicional());
+        cbIdioma.getSelectionModel().select(buscarIdIdioma(ofertaColaboracionUV.getIdIdioma()));
+        cbAreaAcademica.getSelectionModel().select(buscarIdAreaAcademica(ofertaColaboracionUV.getIdAreaAcademica()));
+        cbDependencia.getSelectionModel().select(buscarIdDependencia(ofertaColaboracionUV.getIdDependencia()));
+        cbPeriodo.getSelectionModel().select(buscarIdPeriodo(ofertaColaboracionUV.getIdPeriodo()));
     }
     
     private OfertaColaboracionUV obtenerInformacionOfertaColaboracionUV(){
