@@ -8,8 +8,7 @@ public class Periodo {
     String inicioPeriodo;
     String finPeriodo;
 
-    public Periodo() {
-    }
+    public Periodo() {}
 
     public Periodo(Integer idPeriodo, String nombrePeriodo, String anioPeriodo, String inicioPeriodo, String finPeriodo) {
         this.idPeriodo = idPeriodo;
