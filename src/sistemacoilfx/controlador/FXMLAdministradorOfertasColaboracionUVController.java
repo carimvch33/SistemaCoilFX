@@ -1,19 +1,14 @@
 package sistemacoilfx.controlador;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -23,11 +18,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sistemacoilfx.modelo.dao.OfertaColaboracionUVDAO;
 import sistemacoilfx.modelo.pojo.OfertaColaboracionUV;
-import sistemacoilfx.observador.ObservadorOfertaColaboracionUV;
 import sistemacoilfx.utilidades.Constantes;
 import sistemacoilfx.utilidades.Utils;
 
-public class FXMLAdministradorOfertasColaboracionUVController implements Initializable, ObservadorOfertaColaboracionUV {
+public class FXMLAdministradorOfertasColaboracionUVController implements Initializable {
     
     private int idProfesorUV;
     private ObservableList<OfertaColaboracionUV> ofertasColaboracionUV;
@@ -104,10 +98,5 @@ public class FXMLAdministradorOfertasColaboracionUVController implements Initial
     
     private void cerrarVentana(){
         ((Stage) btnRegresar.getScene().getWindow()).close();
-    }
-
-    @Override
-    public void operacionExitosa(String tipoOperacion, String nombreOfertaColaboracionUV) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

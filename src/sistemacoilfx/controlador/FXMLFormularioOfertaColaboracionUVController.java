@@ -1,8 +1,6 @@
 package sistemacoilfx.controlador;
 
-import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
