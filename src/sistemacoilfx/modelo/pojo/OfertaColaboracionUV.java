@@ -3,7 +3,6 @@ package sistemacoilfx.modelo.pojo;
 public class OfertaColaboracionUV {
 
     Integer idOfertaColaboracionUV;
-    
     String nombre;
     String disciplina;
     String objetivoCurso;
@@ -15,12 +14,10 @@ public class OfertaColaboracionUV {
     Integer idAreaAcademica;
     Integer idDependencia;
     Integer idPeriodo;
-    
     String Idioma;
     String areaAcademica;
     String dependencia;
     String periodo;
-    
     Integer idProfesorUV;
 
     public OfertaColaboracionUV() {}

@@ -7,10 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class SistemaCoilFX extends Application {
-    
-    //ANTONIO
-    //KALEB MR
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("vista/FXMLIniciarSesion.fxml"));
