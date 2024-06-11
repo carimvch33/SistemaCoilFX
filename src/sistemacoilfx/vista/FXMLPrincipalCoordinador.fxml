@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #E0D8F1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoilfx.controlador.FXMLPrincipalCoordinadorController">
+   <children>
+      <Pane prefHeight="90.0" prefWidth="700.0" style="-fx-background-color: #673FB4;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resourses/coilWhiteLogo-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="515.0" layoutY="-1.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #0D47A1;">
+               <children>
+                  <Label layoutX="35.0" layoutY="4.0" text="Sistema COIL-VIC" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label contentDisplay="CENTER" layoutX="265.0" layoutY="30.0" text="BIENVENIDO(A)" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="90.0" prefHeight="90.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="14.0" layoutY="30.0" text="Coordinadores COIL-VIC">
+               <font>
+                  <Font name="Candara Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCerrarSesion" layoutX="640.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnClicCerrarSesion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+         </children>
+      </Pane>
+      <Label fx:id="lbNombreCoordinador" alignment="TOP_LEFT" layoutX="90.0" layoutY="207.0" prefHeight="23.0" prefWidth="272.0">
+         <font>
+            <Font name="Calibri Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnConsultarNumeraliaAreaAcademica" layoutX="305.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaAreaAcademica" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarEvidenciasDeColaboracion" layoutX="90.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarEvidenciasDeColaboracion" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarNumeraliaRegion" layoutX="520.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaRegion" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarHistorialColaboraciones" layoutX="520.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicConsultarHistorialColaboraciones" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnRegistrarOfertaExterna" layoutX="90.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaExterna" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnRevisarRegistroColaboracion" layoutX="305.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRevisarRegistroColaboracion" prefHeight="90.0" prefWidth="90.0" />
+      <Label fx:id="lbNumPersonal" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="440.0" layoutY="207.0" prefHeight="23.0" prefWidth="170.0">
+         <font>
+            <Font name="Calibri Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="70.0" layoutY="347.0" prefHeight="50.0" prefWidth="130.0" text="Consultar Evidencias de Colaboración" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="68.0" layoutY="517.0" prefHeight="50.0" prefWidth="135.0" text="Registrar Oferta de Colaboración Externa" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="285.0" layoutY="347.0" prefHeight="50.0" prefWidth="130.0" text="Consultar Numeralia por Área Académica" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="500.0" layoutY="347.0" prefHeight="50.0" prefWidth="130.0" text="Consultar Numeralia por Región" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="285.0" layoutY="517.0" prefHeight="50.0" prefWidth="130.0" text="Revisar Registro de Colaboración" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="500.0" layoutY="517.0" prefHeight="50.0" prefWidth="130.0" text="Consultar Historial de Colaboraciones" textAlignment="CENTER" textFill="#0d47a1" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

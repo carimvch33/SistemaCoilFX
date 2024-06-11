@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoilfx.controlador.FXMLPrincipalProfesorUVController">
+   <children>
+      <Pane prefHeight="85.0" prefWidth="700.0" style="-fx-background-color: #00AF50;">
+         <children>
+            <Button fx:id="btnMenu" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnClicMenu" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnCerrarSesion" layoutX="640.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnClicCerrarSesion" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Label fx:id="lbNombreProfeUV" alignment="TOP_RIGHT" layoutX="274.0" layoutY="31.0" prefHeight="17.0" prefWidth="361.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+         </children></Pane>
+      <Pane layoutX="454.0" layoutY="85.0" prefHeight="35.0" prefWidth="246.0" style="-fx-background-color: #808080;">
+         <children>
+            <Label fx:id="lbNumPersonal" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" prefHeight="18.0" prefWidth="217.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="455.0" fitWidth="455.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resourses/coilvicE%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="506.0" layoutY="139.0" text="¿Qué es COIL?" textFill="GREY">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbQueEsCOIL" alignment="CENTER" contentDisplay="CENTER" layoutX="459.0" layoutY="171.0" prefHeight="329.0" prefWidth="240.0" textAlignment="CENTER" textFill="GREY">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font></Label>
+      <Pane fx:id="paneMenu" layoutX="-172.0" layoutY="85.0" prefHeight="455.0" prefWidth="172.0" style="-fx-background-color: #E0D8F1;">
+         <children>
+            <Button fx:id="btnRegistrarOfertaUV" layoutX="7.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaUV" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnModificarOfertaUV" layoutX="7.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnClicModificarOfertaUV" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnRegistrarColaboracion" layoutX="7.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnClicRegistrarColaboracion" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnCancelarColaboracion" layoutX="7.0" layoutY="149.0" mnemonicParsing="false" onAction="#btnClicCancelarColaboracion" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnConcluirColaboracion" layoutX="7.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnClicConcluirColaboracion" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnRegistrarProfeExterno" layoutX="7.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaExterna" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnEditarProfeExterno" layoutX="7.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnClicEditarProfeExterno" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="btnConsultarHistorialColaboraciones" layoutX="7.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnClicConsultarHistorialColaboraciones" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
+            <Label fx:id="lbRegistrarOfertaUV" layoutX="56.0" layoutY="25.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Oferta de Colaboración UV" textFill="#00af50" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lbModificarOfertaUV" layoutX="56.0" layoutY="66.0" prefHeight="35.0" prefWidth="116.0" text="Modificar Oferta de Colaboración UV" textFill="#00af50" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbRegistrarColaboracion" layoutX="56.0" layoutY="107.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Colaboración" textFill="#00af50" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbCancelarColaboracion" layoutX="56.0" layoutY="149.0" prefHeight="35.0" prefWidth="116.0" text="Cancelar Colaboración" textFill="#00af50" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbRegistrarProfeExterno" layoutX="56.0" layoutY="234.0" prefHeight="35.0" prefWidth="116.0" text="Registrar Profesor Externo" textFill="#00af50">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbConsultarHistorialColaboraciones" layoutX="56.0" layoutY="316.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbConcluirColaboracion" layoutX="56.0" layoutY="193.0" prefHeight="35.0" prefWidth="116.0" text="Concluir Colaboración" textFill="#00af50" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbEditarProfeExterno" layoutX="56.0" layoutY="275.0" prefHeight="35.0" prefWidth="116.0" textFill="#00af50">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

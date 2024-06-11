@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoilfx.controlador.FXMLAdministradorOfertasColaboracionUVController">
+   <children>
+      <Pane prefHeight="65.0" prefWidth="750.0" style="-fx-background-color: #D00000;">
+         <children>
+            <Label layoutX="273.0" layoutY="11.0" text="MIS OFERTAS" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegresar" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnClicRegresar" text="🡨" />
+         </children>
+      </Pane>
+      <TextField fx:id="tfBusquedaOferta" layoutX="578.0" layoutY="80.0" promptText="Buscar oferta" />
+      <TableView fx:id="tvOfertas" layoutX="52.0" layoutY="119.0" prefHeight="366.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="96.0" text="Nombre" />
+          <TableColumn fx:id="colDisciplina" prefWidth="84.0" text="Disciplina" />
+            <TableColumn fx:id="colIdioma" prefWidth="74.0" text="Idioma" />
+            <TableColumn fx:id="colAreaAcademica" prefWidth="145.0" text="Área académica" />
+            <TableColumn fx:id="colDependencia" prefWidth="122.0" text="Dependencia" />
+            <TableColumn fx:id="colPeriodo" prefWidth="124.0" text="Periodo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSiguiente" layoutX="665.0" layoutY="504.0" mnemonicParsing="false" onAction="#btnClicSiguiente" text="Siguiente" />
+   </children>
+</AnchorPane>

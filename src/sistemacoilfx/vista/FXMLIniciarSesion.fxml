@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: E1E1E1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoilfx.controlador.FXMLIniciarSesionController">
+    <children>
+      <ImageView fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resourses/coilvicIcon.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="296.0" layoutY="81.0" text="Inicio de sesión" textFill="#366cff">
+         <font>
+            <Font name="Impact" size="45.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfUsuario" focusTraversable="false" layoutX="368.0" layoutY="175.0" promptText="Usuario" />
+      <Button fx:id="btnIniciarSesion" focusTraversable="false" layoutX="398.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnClicIniciarSesion" style="-fx-background-color: #22891f;" text="Iniciar sesión" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="tfPassword" focusTraversable="false" layoutX="368.0" layoutY="223.0" promptText="Contraseña" />
+      <Pane layoutX="450.0" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #0042FF;">
+         <children>
+            <Label layoutX="42.0" layoutY="4.0" text="Sistema COIL-VIC" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

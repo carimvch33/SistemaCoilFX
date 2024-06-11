@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoilfx.controlador.FXMLFormularioOfertaColaboracionUVController">
+   <children>
+      <Pane prefHeight="68.0" prefWidth="768.0" style="-fx-background-color: #9999FF;">
+         <children>
+            <Label fx:id="lbTituloFormulario" layoutX="118.0" layoutY="14.0" text="Registrar Oferta de Colaboración UV" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="btnRegistrar" focusTraversable="false" layoutX="603.0" layoutY="521.0" mnemonicParsing="false" onAction="#btnClicRegistrar" text="Registrar" />
+      <Button fx:id="btnCancelar" focusTraversable="false" layoutX="682.0" layoutY="521.0" mnemonicParsing="false" onAction="#btnClicCancelar" text="Cancelar" />
+      <Label layoutX="31.0" layoutY="118.0" text="Nombre del curso COIL-VIC:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="118.0" text="Idioma:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNombreCursoCV" layoutX="264.0" layoutY="117.0" prefHeight="25.0" prefWidth="210.0" />
+      <Label layoutX="31.0" layoutY="165.0" text="Disciplina:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbPeriodo" layoutX="123.0" layoutY="210.0" prefHeight="25.0" prefWidth="210.0" />
+      <Label layoutX="31.0" layoutY="211.0" text="Periodo:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="250.0" text="Objetivo del curso:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="381.0" text="Temas de interés:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="165.0" text="Dependencia:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbIdioma" layoutX="558.0" layoutY="117.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="398.0" layoutY="211.0" text="Área académica:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="250.0" prefHeight="23.0" prefWidth="210.0" text="Perfil de los estudiantes:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="381.0" prefHeight="23.0" prefWidth="187.0" text="Información adicional:">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbAreaAcademica" layoutX="538.0" layoutY="210.0" prefHeight="25.0" prefWidth="194.0" />
+      <ComboBox fx:id="cbDependencia" layoutX="538.0" layoutY="164.0" prefHeight="25.0" prefWidth="194.0" />
+      <TextField fx:id="tfDisciplina" layoutX="123.0" layoutY="164.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextArea fx:id="taObjetivoCurso" layoutX="33.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taPerfilEstudiantes" layoutX="398.0" layoutY="273.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taTemasInteres" layoutX="33.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+      <TextArea fx:id="taInformacionAdicional" layoutX="398.0" layoutY="404.0" prefHeight="100.0" prefWidth="305.0" wrapText="true" />
+   </children>
+</AnchorPane>
