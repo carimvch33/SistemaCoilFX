@@ -31,10 +31,10 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
     private OfertaColaboracionUV ofertaEdicion;
     private int idProfesorUV;
     private ObservadorOfertaColaboracionUV observador;
-    ObservableList<Periodo> periodos;
-    ObservableList<Idioma> idiomas;
-    ObservableList<AreaAcademica> areasAcademicas;
-    ObservableList<Dependencia> dependencias;
+    private ObservableList<Periodo> periodos;
+    private ObservableList<Idioma> idiomas;
+    private ObservableList<AreaAcademica> areasAcademicas;
+    private ObservableList<Dependencia> dependencias;
 
     @FXML
     private Button btnRegistrar;
@@ -65,10 +65,10 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cargarPeriodos();
         cargarIdiomas();
         cargarCargarAreasAcademicas();
         cargarDependencias();
+        cargarPeriodos();
     }
     
     public void inicializarValores(OfertaColaboracionUV ofertaEdicion, int idProfesorUV, ObservadorOfertaColaboracionUV observador){
@@ -78,6 +78,8 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
         System.out.println("Oferta Colaboración UV: " + ((ofertaEdicion != null) ? ofertaEdicion.getNombre() : "NUEVA"));
         if(this.ofertaEdicion != null){
             lbTituloFormulario.setText(ofertaEdicion.getNombre());
+            btnRegistrar.setText("Guardar cambios");
+            btnRegistrar.setLayoutX(561);
             cargarInformacionOfertaEdicion(this.ofertaEdicion);
         }
     }
@@ -113,8 +115,8 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
             if(ofertaEdicion == null){
                 registrarOfertaColaboracionUV(ofertaColaboracionUV);
             }else{
-                ofertaEdicion = obtenerInformacionOfertaColaboracionUV();
-                //actualizar
+                obtenerInformacionOfertaColaboracionUV().setIdOfertaColaboracionUV(ofertaEdicion.getIdOfertaColaboracionUV());
+                modificarOfertaColaboracionUV(ofertaEdicion);
             }
         }
     }
@@ -185,7 +187,7 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
         ofertaColaboracionUV.setIdAreaAcademica(cbAreaAcademica.getSelectionModel().getSelectedItem().getIdAreaAcademica());
         ofertaColaboracionUV.setIdDependencia(cbDependencia.getSelectionModel().getSelectedItem().getIdDependencia());
         ofertaColaboracionUV.setIdPeriodo(cbPeriodo.getSelectionModel().getSelectedItem().getIdPeriodo());
-        ofertaColaboracionUV.setIdProfesorUV(this.idProfesorUV);
+        ofertaColaboracionUV.setIdProfesorUV(this.idProfesorUV);        
         return ofertaColaboracionUV;
     }
     
@@ -201,6 +203,17 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
             cerrarVentana();
         }else{
             Utils.mostrarAlertaSimple("Error al registrar", "" + respuesta.get(Constantes.KEY_MENSAJE), Alert.AlertType.ERROR);
+        }
+    }
+    
+    private void modificarOfertaColaboracionUV(OfertaColaboracionUV ofertaColaboracionUV){
+        HashMap<String, Object> respuesta = OfertaColaboracionUVDAO.modificarOfertaColaboracionUV(ofertaColaboracionUV);
+        if(!(boolean)respuesta.get(Constantes.KEY_ERROR)){
+            Utils.mostrarAlertaSimple("Oferta modificada", "Los datos de la oferta "+ofertaColaboracionUV.getNombre()+" han sido modificados correctamente.", Alert.AlertType.INFORMATION);
+            observador.operacionExitosa("Modificación", ofertaColaboracionUV.getNombre());
+            cerrarVentana();
+        }else{
+            Utils.mostrarAlertaSimple("Error al actualizar", ""+respuesta.get(Constantes.KEY_MENSAJE), Alert.AlertType.ERROR);
         }
     }
     
