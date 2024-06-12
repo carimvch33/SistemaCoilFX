@@ -82,7 +82,7 @@ public class OfertaColaboracionUVDAO {
                     respuesta.put(Constantes.KEY_ERROR, false);
                     respuesta.put(Constantes.KEY_MENSAJE, "Oferta de Colaboración UV registrada correctamente.");
                 } else {
-                    respuesta.put(Constantes.KEY_MENSAJE, "Lo sentimos, ha ocurrido un error al registrar la oferta de colaboración UV, favor de verificar la información.");
+                    respuesta.put(Constantes.KEY_MENSAJE, "Lo sentimos, ha ocurrido un error al registrar la Oferta de Colaboración UV, favor de verificar la información.");
                 }
                 conexionBD.close();
             } catch(SQLException ex){
@@ -91,6 +91,42 @@ public class OfertaColaboracionUVDAO {
             }
         } else {
             respuesta.put(Constantes.KEY_MENSAJE, Constantes.MSJ_ERROR_CONEXION);            
+        }
+        return respuesta;
+    }
+    
+    public static HashMap<String, Object> modificarOfertaColaboracionUV(OfertaColaboracionUV ofertaColaboracionUV){
+        HashMap<String, Object> respuesta = new HashMap<>();
+        respuesta.put(Constantes.KEY_ERROR, true);
+        Connection conexionBD = ConexionBD.obtenerConexion();
+        if(conexionBD != null){
+            String sentencia = "UPDATE ofertacolaboracionuv SET nombreColaboracion = ?, disciplina = ?, objetivoCurso = ?, perfilEstudiante = ?, temaInteres = ?, informacionAdicional = ?, idIdioma = ?, idAreaAcademica = ?, idDependencia = ?, idPeriodo = ? WHERE idOfertaColaboracionUV = ?";
+            try{
+                PreparedStatement prepararSentencia = conexionBD.prepareStatement(sentencia);
+                prepararSentencia.setString(1, ofertaColaboracionUV.getNombre());
+                prepararSentencia.setString(2, ofertaColaboracionUV.getDisciplina());
+                prepararSentencia.setString(3, ofertaColaboracionUV.getObjetivoCurso());
+                prepararSentencia.setString(4, ofertaColaboracionUV.getPerfilEstudiante());
+                prepararSentencia.setString(5, ofertaColaboracionUV.getTemaInteres());
+                prepararSentencia.setString(6, ofertaColaboracionUV.getInformacionAdicional());
+                prepararSentencia.setInt(7, ofertaColaboracionUV.getIdIdioma());
+                prepararSentencia.setInt(8, ofertaColaboracionUV.getIdAreaAcademica());
+                prepararSentencia.setInt(9, ofertaColaboracionUV.getIdDependencia());
+                prepararSentencia.setInt(10, ofertaColaboracionUV.getIdPeriodo());
+                prepararSentencia.setInt(11, ofertaColaboracionUV.getIdOfertaColaboracionUV());
+                int filasAfectadas = prepararSentencia.executeUpdate();
+                if(filasAfectadas > 0){
+                    respuesta.put(Constantes.KEY_ERROR, false);
+                    respuesta.put(Constantes.KEY_MENSAJE, "Datos de la Oferta Colaboración UV modificados correctamente.");
+                }else{
+                    respuesta.put(Constantes.KEY_MENSAJE, "Lo sentimos, ha ocurrido un error al modificar los datos de la Oferta de Colaboración UV, favor de verificar la información.");
+                }
+                conexionBD.close();
+            }catch(SQLException ex){
+                respuesta.put(Constantes.KEY_MENSAJE, ex.getMessage());
+            }
+        }else{
+            respuesta.put(Constantes.KEY_MENSAJE, Constantes.MSJ_ERROR_CONEXION);
         }
         return respuesta;
     }
