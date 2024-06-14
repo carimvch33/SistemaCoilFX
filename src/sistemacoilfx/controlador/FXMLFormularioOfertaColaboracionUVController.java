@@ -69,6 +69,7 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
         cargarCargarAreasAcademicas();
         cargarDependencias();
         cargarPeriodos();
+        //inicializarValores(ofertaEdicion, idProfesorUV, observador);
     }
     
     public void inicializarValores(OfertaColaboracionUV ofertaEdicion, int idProfesorUV, ObservadorOfertaColaboracionUV observador){
@@ -115,7 +116,7 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
             if(ofertaEdicion == null){
                 registrarOfertaColaboracionUV(ofertaColaboracionUV);
             }else{
-                obtenerInformacionOfertaColaboracionUV().setIdOfertaColaboracionUV(ofertaEdicion.getIdOfertaColaboracionUV());
+                ofertaEdicion = obtenerInformacionOfertaColaboracionUV();
                 modificarOfertaColaboracionUV(ofertaEdicion);
             }
         }
@@ -187,7 +188,10 @@ public class FXMLFormularioOfertaColaboracionUVController implements Initializab
         ofertaColaboracionUV.setIdAreaAcademica(cbAreaAcademica.getSelectionModel().getSelectedItem().getIdAreaAcademica());
         ofertaColaboracionUV.setIdDependencia(cbDependencia.getSelectionModel().getSelectedItem().getIdDependencia());
         ofertaColaboracionUV.setIdPeriodo(cbPeriodo.getSelectionModel().getSelectedItem().getIdPeriodo());
-        ofertaColaboracionUV.setIdProfesorUV(this.idProfesorUV);        
+        ofertaColaboracionUV.setIdProfesorUV(this.idProfesorUV);
+        if(ofertaEdicion != null){
+            ofertaColaboracionUV.setIdOfertaColaboracionUV(ofertaEdicion.getIdOfertaColaboracionUV());
+        }
         return ofertaColaboracionUV;
     }
     
