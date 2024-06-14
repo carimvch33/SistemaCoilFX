@@ -48,12 +48,12 @@
             <Font name="Calibri Italic" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnConsultarNumeraliaAreaAcademica" layoutX="305.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaAreaAcademica" prefHeight="90.0" prefWidth="90.0" />
-      <Button fx:id="btnConsultarEvidenciasDeColaboracion" layoutX="90.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarEvidenciasDeColaboracion" prefHeight="90.0" prefWidth="90.0" />
-      <Button fx:id="btnConsultarNumeraliaRegion" layoutX="520.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaRegion" prefHeight="90.0" prefWidth="90.0" />
-      <Button fx:id="btnConsultarHistorialColaboraciones" layoutX="520.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicConsultarHistorialColaboraciones" prefHeight="90.0" prefWidth="90.0" />
-      <Button fx:id="btnRegistrarOfertaExterna" layoutX="90.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaExterna" prefHeight="90.0" prefWidth="90.0" />
-      <Button fx:id="btnRevisarRegistroColaboracion" layoutX="305.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRevisarRegistroColaboracion" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarNumeraliaAreaAcademica" focusTraversable="false" layoutX="305.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaAreaAcademica" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarEvidenciasDeColaboracion" focusTraversable="false" layoutX="90.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarEvidenciasDeColaboracion" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarNumeraliaRegion" focusTraversable="false" layoutX="520.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClicConsultarNumeraliaRegion" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnConsultarHistorialColaboraciones" focusTraversable="false" layoutX="520.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicConsultarHistorialColaboraciones" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnRegistrarOfertaExterna" focusTraversable="false" layoutX="90.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRegistrarOfertaExterna" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnRevisarRegistroColaboracion" focusTraversable="false" layoutX="305.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnClicRevisarRegistroColaboracion" prefHeight="90.0" prefWidth="90.0" />
       <Label fx:id="lbNumPersonal" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="440.0" layoutY="207.0" prefHeight="23.0" prefWidth="170.0">
          <font>
             <Font name="Calibri Italic" size="20.0" />

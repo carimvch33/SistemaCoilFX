@@ -32,9 +32,7 @@ public class FXMLIniciarSesionController implements Initializable {
     private Button btnIniciarSesion;
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
+    public void initialize(URL url, ResourceBundle rb) {}
 
     @FXML
     private void btnClicIniciarSesion(ActionEvent event) {
@@ -93,7 +91,6 @@ public class FXMLIniciarSesionController implements Initializable {
             Parent root = loader.load();
             FXMLPrincipalProfesorUVController controlador = loader.getController();
             controlador.inicializarValores(profesorUV);
-            controlador.inicializarValoresAdministrador(profesorUV.getIdProfesorUV());
             Scene escenaPrincipal = new Scene(root);
             escenarioPrincipal.setTitle("Menú principal");
             escenarioPrincipal.setScene(escenaPrincipal);

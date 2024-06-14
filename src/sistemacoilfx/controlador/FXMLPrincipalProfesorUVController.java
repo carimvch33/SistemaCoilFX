@@ -16,16 +16,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sistemacoilfx.modelo.pojo.OfertaColaboracionUV;
 import sistemacoilfx.modelo.pojo.ProfesorUV;
-import sistemacoilfx.observador.ObservadorOfertaColaboracionUV;
 import sistemacoilfx.utilidades.Constantes;
 import sistemacoilfx.utilidades.Utils;
 
-public class FXMLPrincipalProfesorUVController implements Initializable, ObservadorOfertaColaboracionUV {
+public class FXMLPrincipalProfesorUVController implements Initializable {
     
     private ProfesorUV profesorUV;
-    private int idProfesorUV;
     private boolean estadoBoton = false;
 
     @FXML
@@ -82,11 +79,6 @@ public class FXMLPrincipalProfesorUVController implements Initializable, Observa
         lbNumPersonal.setText("Número de personal: "+this.profesorUV.getNumPersonal());
         lbQueEsCOIL.setText(Constantes.QUE_ES_COIL);
         configurarBotonesYEtiquetas();
-    }
-    
-    public void inicializarValoresAdministrador(int idProfesorUV){
-        this.idProfesorUV = idProfesorUV;
-        //configurarBusquedaPaciente();
     }
     
     @FXML
@@ -161,7 +153,15 @@ public class FXMLPrincipalProfesorUVController implements Initializable, Observa
     
     @FXML
     private void btnClicRegistrarOfertaUV(ActionEvent event) {
-        irFormularioOfertaColaboracionUV(null, idProfesorUV);
+        try {
+            FXMLLoader loader = Utils.obtenerLoader("vista/FXMLAdministradorOfertasColaboracionUV.fxml");
+            Parent root = loader.load();
+            FXMLAdministradorOfertasColaboracionUVController controlador = loader.getController();
+            controlador.inicializarValores(profesorUV.getIdProfesorUV());
+            controlador.irFormularioOfertaColaboracionUV(null, profesorUV.getIdProfesorUV());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
     
     @FXML
@@ -173,7 +173,7 @@ public class FXMLPrincipalProfesorUVController implements Initializable, Observa
             controlador.inicializarValores(profesorUV.getIdProfesorUV());
             Stage escenarioAdmin = new Stage();
             Scene escena = new Scene(root);
-            escenarioAdmin.setTitle("Administrador de ofertas de colaboración UV");
+            escenarioAdmin.setTitle("Seleccionar oferta");
             escenarioAdmin.setScene(escena);
             escenarioAdmin.initModality(Modality.APPLICATION_MODAL);
             escenarioAdmin.showAndWait();
@@ -204,29 +204,5 @@ public class FXMLPrincipalProfesorUVController implements Initializable, Observa
 
     @FXML
     private void btnClicConsultarHistorialColaboraciones(ActionEvent event) {
-    }
-    
-    public void irFormularioOfertaColaboracionUV(OfertaColaboracionUV ofertaColaboracionUVEdicion, int idProfesorUV){
-        try {
-            Stage escenario = new Stage();
-            FXMLLoader loader = Utils.obtenerLoader("vista/FXMLFormularioOfertaColaboracionUV.fxml");
-            Parent root = loader.load();
-            FXMLFormularioOfertaColaboracionUVController controlador = loader.getController();
-            controlador.inicializarValores(ofertaColaboracionUVEdicion, idProfesorUV, this);
-            Scene escena = new Scene(root);
-            escenario.setScene(escena);
-            escenario.setTitle("Ofertas de Colaboración UV");
-            escenario.initModality(Modality.APPLICATION_MODAL);
-            escenario.showAndWait();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    @Override
-    public void operacionExitosa(String tipoOperacion, String nombreOfertaColaboracionUV) {
-        System.out.println("Operación: " + tipoOperacion);
-        System.out.println("Oferta de Colaboración UV: " + nombreOfertaColaboracionUV);
-        //cargarDatosOfertasColaboracionUV();
     }
 }
