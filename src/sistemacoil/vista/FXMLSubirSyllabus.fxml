@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="1420.0" styleClass="anchor-pane" stylesheets="@../estilos/estilosPane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoil.controlador.FXMLSubirSyllabusController">
+   <children>
+      <Pane layoutX="59.0" layoutY="88.0" prefHeight="678.0" prefWidth="1076.0" styleClass="pane" stylesheets="@../estilos/estilosPane.css">
+         <children>
+            <Label layoutX="38.0" layoutY="38.0" styleClass="subtitle-label" stylesheets="@../estilos/estilosLabel.css" text="Subir Archivo">
+               <font>
+                  <Font size="28.0" />
+               </font></Label>
+            <VBox layoutX="38.0" layoutY="93.0" prefHeight="72.0" prefWidth="362.0" spacing="8.0">
+               <children>
+                  <Label text="Nombre del Archivo:">
+                     <font>
+                        <Font name="Inter Medium" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField editable="false" prefHeight="42.0" prefWidth="371.0" stylesheets="@../estilos/estilosComponentes.css" text="Syllabus" />
+               </children>
+            </VBox>
+            <Pane fx:id="paneSubirArchivo" layoutX="38.0" layoutY="207.0" prefHeight="421.0" prefWidth="1000.0" styleClass="drop-zone" stylesheets="@../estilos/estilosPane.css">
+               <children>
+                  <VBox alignment="CENTER" layoutX="342.0" layoutY="89.0" prefHeight="243.0" prefWidth="316.0">
+                     <children>
+                        <ImageView fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../recursos/iconos/upload-file.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label style="-fx-font-family: 'Inter Medium'; -fx-font-size: 20px;" text="Arrastrar y soltar aquí" textFill="#87878e">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label style="-fx-font-family: 'Inter Medium'; -fx-font-size: 20px;" text="o" textFill="#87878e">
+                           <font>
+                              <Font name="Inter Medium" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#btnAbrirExplorador" style="-fx-background-color: transparent;" styleClass="simple" stylesheets="@../estilos/estilosBotones.css" text="Abrir Explorador de Archivos">
+                           <font>
+                              <Font name="Inter Medium" size="20.0" />
+                           </font></Button>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

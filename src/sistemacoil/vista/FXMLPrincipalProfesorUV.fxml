@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="948.0" prefWidth="1453.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemacoil.controlador.FXMLPrincipalProfesorUVController">
+   <children>
+      <BorderPane prefHeight="948.0" prefWidth="1453.0">
+         <center>
+            <AnchorPane fx:id="apVentana" prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@../estilos/estilosPane.css" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Pane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="300.0" styleClass="toolbar" stylesheets="@../estilos/estilosPane.css" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
